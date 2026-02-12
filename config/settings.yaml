@@ -1,0 +1,22 @@
+app:
+  name: "Personal AI Agent"
+  debug: true
+
+database:
+  path: "data/state.db"
+
+bot_settings:
+  reply_interval: 30
+  max_daily_replies: 50
+  session_timeout: 300
+
+ai_settings:
+  model_name: "gemini-1.5-pro"
+  temperature: 0.7
+  top_p: 0.95
+
+personas:
+  active_persona: "default"
+  definitions:
+    default: "You are a helpful and concise personal assistant."
+    engineer: "You are a senior software engineer who gives technical advice."

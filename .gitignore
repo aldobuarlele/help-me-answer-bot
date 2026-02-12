@@ -1,0 +1,19 @@
+cat <<EOF > .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Conda
+.conda/
+
+# App Specific
+data/*.db
+logs/*.log
+config/settings.yaml (local)
+
+# OS
+.DS_Store
+EOF
