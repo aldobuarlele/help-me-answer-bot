@@ -11,9 +11,9 @@ bot_settings:
   session_timeout: 300
 
 ai_settings:
-  model_name: "gemini-1.5-pro"
+  model_name: "llama-3.3-70b-versatile"
   temperature: 0.7
-  top_p: 0.95
+  top_p: 1.0
 
 personas:
   active_persona: "default"
