@@ -8,7 +8,6 @@ async def run_test():
     log = setup_logger("Phase1_Test")
     log.info("--- STARTING PHASE 1 TESTING ---")
 
-    # 1. Test Config Loader
     try:
         config = load_config()
         log.info(f"SUCCESS: Config loaded for project: {config.app.name}")
@@ -16,7 +15,6 @@ async def run_test():
         log.error(f"FAILED: Config loader error: {e}")
         return
 
-    # 2. Test Database Initialization
     try:
         db = Database(config.database.path)
         await db.initialize()
@@ -28,7 +26,6 @@ async def run_test():
         log.error(f"FAILED: Database error: {e}")
         return
 
-    # 3. Test Database Write/Read
     try:
         from datetime import datetime
         test_user_id = 12345
