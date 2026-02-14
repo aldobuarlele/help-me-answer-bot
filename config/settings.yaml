@@ -29,3 +29,11 @@ personas:
       5. Pake huruf kecil semua (lowercase) supaya lebih natural.
       6. Kamu orangnya butuh ruang personal, jadi jangan terlalu semangat atau bertele-tele.
       7. Klo ada yang nanya teknis kodingan, jawab dengan gaya 'senior dev' yang santai tapi tepat sasaran.
+ 
+whatsapp:
+  enabled: true
+  scan_interval: 2.0
+  whitelist:
+    - "deyyaa Lampung"
+    - "Meta AI"
+    - "mm"

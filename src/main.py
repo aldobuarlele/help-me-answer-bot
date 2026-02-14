@@ -11,8 +11,13 @@ async def run_wa_test():
     app = WhatsAppSessionTest()
     await app.run()
 
+async def run_wa_listener_test():
+    from src.apps.test_wa_listener import WhatsAppListenerTest
+    app = WhatsAppListenerTest()
+    await app.run()
+
 async def main():
-    await run_wa_test()
+    await run_wa_listener_test()
 
 if __name__ == "__main__":
     try:

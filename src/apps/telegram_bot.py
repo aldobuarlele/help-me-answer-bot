@@ -17,17 +17,13 @@ class TelegramBotApp:
     async def run(self):
         self.log.info("--- STARTING DEDICATED TELEGRAM BOT ---")
         try:
-            # Inisialisasi Database
             db = Database(self.config.database.path)
             await db.initialize()
             
-            # Inisialisasi AI Service (Groq)
             ai_service = AiService(self.config, os.getenv("GROQ_API_KEY"))
             
-            # Inisialisasi Orchestrator (Gatekeeper + Logic)
             orchestrator = Orchestrator(self.config, db, ai_service)
             
-            # Inisialisasi Telegram Adapter
             telegram = TelegramAdapter(os.getenv("TELEGRAM_BOT_TOKEN"))
             telegram.register_handlers(orchestrator)
 

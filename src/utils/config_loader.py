@@ -1,7 +1,7 @@
 import yaml
 from pathlib import Path
 from pydantic import BaseModel
-from typing import Dict
+from typing import Dict, List, Optional
 
 class AppConfig(BaseModel):
     name: str
@@ -24,12 +24,18 @@ class PersonaConfig(BaseModel):
     active_persona: str
     definitions: Dict[str, str]
 
+class WhatsappConfig(BaseModel):
+    enabled: bool
+    scan_interval: float
+    whitelist: List[str]
+
 class RootConfig(BaseModel):
     app: AppConfig
     database: DatabaseConfig
     bot_settings: BotSettings
     ai_settings: AISettings
     personas: PersonaConfig
+    whatsapp: Optional[WhatsappConfig] = None 
 
 def load_config(config_path: str = "config/settings.yaml") -> RootConfig:
     path = Path(config_path)
