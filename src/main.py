@@ -21,8 +21,13 @@ async def run_wa_executor_test():
     app = WhatsAppExecutorTest()
     await app.run()
 
+async def run_whatsapp_bot():
+    from src.apps.whatsapp_bot import WhatsAppBotApp
+    app = WhatsAppBotApp()
+    await app.run()
+
 async def main():
-    await run_wa_executor_test()
+    await run_whatsapp_bot()
 
 if __name__ == "__main__":
     try:

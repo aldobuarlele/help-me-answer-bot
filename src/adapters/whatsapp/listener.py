@@ -19,7 +19,7 @@ class WhatsAppListener:
             chat_rows = self.driver.find_elements(By.XPATH, self.XPATH_ROWS)
             detected_chats = []
 
-            print(f"DEBUG: Ditemukan {len(chat_rows)} baris chat.") 
+            # print(f"DEBUG: Ditemukan {len(chat_rows)} baris chat.") 
 
             for row in chat_rows:
                 try:
@@ -29,7 +29,7 @@ class WhatsAppListener:
                     unread_indicators = row.find_elements(By.XPATH, self.XPATH_UNREAD_BADGE)
                     
                     if len(unread_indicators) > 0:
-                        self.log.info(f"DEBUG: Unread terdeteksi di '{contact_name}'")
+                        # self.log.info(f"DEBUG: Unread terdeteksi di '{contact_name}'")
                         
                         if self._is_whitelisted(contact_name):
                             self.log.info(f"[MATCH] Pesan VIP dari: {contact_name}")
