@@ -1,19 +1,32 @@
-cat <<EOF > .gitignore
-# Python
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
-venv/
+*.manifest
+*.spec
+
+# --- Environments ---
 .env
+venv/
+env/
+.venv/
 
-# Conda
-.conda/
+# --- Database & Logs ---
+*.db
+*.sqlite3
+logs/
+*.log
 
-# App Specific
-data/*.db
-logs/*.log
-config/settings.yaml (local)
+# --- WhatsApp Selenium Session (SANGAT PENTING) ---
+chrome_data/
+chromedriver
+geckodriver
 
-# OS
-.DS_Store
-EOF
+# --- Temporary Files ---
+temp/
+tmp/
