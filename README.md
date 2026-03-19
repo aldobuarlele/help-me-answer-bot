@@ -2,13 +2,6 @@
 
 A Python-based automation tool that connects WhatsApp Web to an LLM (Groq) to automate replies. This project uses Selenium WebDriver for browser interaction and maintains a local SQLite database to store conversation context.
 
-## Prerequisites
-
-* **OS:** macOS / Linux / Windows.
-* **Python:** Version 3.10 or higher.
-* **Browser:** Google Chrome (Latest version installed).
-* **API Key:** Groq API Key (for the LLM engine).
-
 ## Features
 
 * **Session Persistence:** Logs in once via QR code; subsequent runs use the stored Chrome session (no need to rescan).
@@ -19,6 +12,13 @@ A Python-based automation tool that connects WhatsApp Web to an LLM (Groq) to au
     * Implements "Hit & Run" logic (presses ESC) to reset unread badges for the listener.
     * Handles cooldowns: waits inside the chat for short delays, or marks as read and closes chat for long delays.
 * **Robust Selector Strategy:** Uses multi-step XPath strategies to retrieve message text (handles standard text and some rich text formats).
+
+## Prerequisites
+
+* **OS:** macOS / Linux / Windows.
+* **Python:** Version 3.10 or higher.
+* **Browser:** Google Chrome (Latest version installed).
+* **API Key:** Groq API Key (for the LLM engine).
 
 ## Installation
 
